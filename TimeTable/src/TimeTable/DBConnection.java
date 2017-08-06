@@ -4,7 +4,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 
 import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.PreparedStatement;
+import com.mysql.jdbc.PreparedStatement;//I don't have com.mysql°ü
 
 public class DBConnection {
 
