@@ -15,7 +15,7 @@ public class DBConnection {
     private final String driver = "com.mysql.jdbc.Driver";  
     private final String url = "jdbc:mysql://localhost:3306/ProductList";  
     private final String user = "root";  
-    private final String passwd = "123"; 
+    private final String passwd = "123"; //
     
     
     //query
