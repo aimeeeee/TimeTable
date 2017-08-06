@@ -44,7 +44,7 @@ public class Tinterface {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JLabel lblNewLabel = new JLabel("New label");
-		frame.getContentPane().add(lblNewLabel, BorderLayout.WEST);
+		frame.getContentPane().add(lblNewLabel, BorderLayout.WEST);//to set up layout
 		
 		textField = new JTextField();
 		frame.getContentPane().add(textField, BorderLayout.CENTER);
