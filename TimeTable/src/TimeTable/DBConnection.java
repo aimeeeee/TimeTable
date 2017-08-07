@@ -4,7 +4,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 
 import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.PreparedStatement;//I don't have com.mysql°ü
+import com.mysql.jdbc.PreparedStatement;
 
 public class DBConnection {
 
@@ -13,9 +13,9 @@ public class DBConnection {
     private java.sql.PreparedStatement ps = null;  
     private ResultSet rs = null;  
     private final String driver = "com.mysql.jdbc.Driver";  
-    private final String url = "jdbc:mysql://localhost:3306/ProductList";  
+    private final String url = "jdbc:mysql://localhost:3306/TimeTable";  
     private final String user = "root";  
-    private final String passwd = "123"; //
+    private final String passwd = "123"; 
     
     
     //query
