@@ -117,9 +117,11 @@ public class Tinterface {
 	JComboBox cBoxCourse = new JComboBox();
 		cBoxCourse.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent e) {
+				if(e.getStateChange() == ItemEvent.SELECTED)
 				cBoxCourse.addItem(list);
 				//System.out.print(list);
 			}
+			
 		});
 		cBoxCourse.setToolTipText("");
 		cBoxCourse.setBounds(236, 7, 94, 24);
