@@ -99,7 +99,7 @@ public class Tinterface {
 			    list.addAll(SC.matchLevel(selectLevel));
 			   
 			    cBoxCourse.addItem(list);
-			    cBoxCourse.remove(1);
+			   
 				 }
 			}
 		});
