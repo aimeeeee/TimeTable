@@ -27,22 +27,16 @@ public class Tinterface {
 	String selectLevel;
      ArrayList list = new ArrayList();
     
-	
-	/*public void course() {
-	
-	JComboBox cBoxCourse = new JComboBox();
-	cBoxCourse.addItemListener(new ItemListener() {
-		public void itemStateChanged(ItemEvent e) {
-			cBoxCourse.addItem(list);
-			//System.out.print(list);
-		}
-	});
-	cBoxCourse.setToolTipText("");
-	cBoxCourse.setBounds(236, 7, 94, 24);
-	frame.getContentPane().add(cBoxCourse);
-	cBoxCourse.addItem(list);
-	}*/
-	
+    String[] cString  = { "please select level"};
+     JComboBox cBoxCourse = new JComboBox(cString);
+ 	 
+ 	
+	public void course() {
+		cBoxCourse.setToolTipText("123");
+		cBoxCourse.setBounds(236, 7, 94, 24);
+		frame.getContentPane().add(cBoxCourse);
+    
+	}
 	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -66,7 +60,7 @@ public class Tinterface {
 	public Tinterface() {
 		
 		initialize();
-		//course();
+		course();
 	}
 
 	/**
@@ -100,10 +94,12 @@ public class Tinterface {
 			 
 				SelectCourse SC = new SelectCourse();
 			    selectLevel = (String) cBoxLevel.getSelectedItem();
-			 
+			    list.clear();
+			  
 			    list.addAll(SC.matchLevel(selectLevel));
-			
-		
+			   
+			    cBoxCourse.addItem(list);
+			    cBoxCourse.remove(1);
 				 }
 			}
 		});
@@ -114,19 +110,19 @@ public class Tinterface {
 		frame.getContentPane().add(cBoxLevel);
 		
 		
-	JComboBox cBoxCourse = new JComboBox();
-		cBoxCourse.addItemListener(new ItemListener() {
+	//JComboBox cBoxCourse = new JComboBox();
+		/*cBoxCourse.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent e) {
 				if(e.getStateChange() == ItemEvent.SELECTED)
 				cBoxCourse.addItem(list);
 				//System.out.print(list);
 			}
 			
-		});
-		cBoxCourse.setToolTipText("");
+		});*/
+	/*	cBoxCourse.setToolTipText("");
 		cBoxCourse.setBounds(236, 7, 94, 24);
 		frame.getContentPane().add(cBoxCourse);
-		cBoxCourse.addItem("please select level");
+		cBoxCourse.addItem("please select level");*/
 		
 		JLabel lblStream = new JLabel("Stream");
 		lblStream.setBounds(346, 12, 60, 15);
