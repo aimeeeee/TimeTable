@@ -95,11 +95,11 @@ public class Tinterface {
 				SelectCourse SC = new SelectCourse();
 			    selectLevel = (String) cBoxLevel.getSelectedItem();
 			    list.clear();
-			    course();
 			    list.addAll(SC.matchLevel(selectLevel));
-			  
+			    course();
+			    cBoxCourse.removeAllItems();
 			    cBoxCourse.addItem(list);
-		
+			    System.out.println(list);
 				 }
 			}
 		});

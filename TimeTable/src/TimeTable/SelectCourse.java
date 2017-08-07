@@ -8,9 +8,9 @@ import com.mysql.jdbc.ResultSetMetaData;
 
 public class SelectCourse extends Tinterface{
 	
-	public ArrayList<Map<String, Object>> matchLevel(String level) {
+	public ArrayList<String> matchLevel(String level) {
 		
-    ArrayList courseList = new ArrayList();	
+    ArrayList<String> courseList = new ArrayList();	
     
 	DBConnection DBC = new DBConnection();
 	ResultSet rs = DBC.queryExecute("select NAME from course where LEVEL = ? ", level);
@@ -18,14 +18,13 @@ public class SelectCourse extends Tinterface{
 		try {
 			
 		while (rs.next()) {//数据集不为空
-			courseList.add(rs.getObject(1));		
+			courseList.add((String) rs.getObject(1));		
 			}
 		
 		System.out.println(courseList);
 		
 		}
 		catch (Exception e) {  
-            // TODO: handle exception  
             e.printStackTrace();  
       }  
 		return courseList;
