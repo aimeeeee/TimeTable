@@ -25,17 +25,48 @@ public class Tinterface {
 
 	private JFrame frame;
 	String selectLevel;
-     ArrayList list = new ArrayList();
+	String selectCourse;
+     ArrayList<String> list = new ArrayList();
+     ArrayList<String> listC = new ArrayList();
     
-    String[] cString  = { "please select level"};
-     JComboBox cBoxCourse = new JComboBox(cString);
+    // String[] cString  = { "please select level"};
+     JComboBox cBoxCourse = new JComboBox();
  	 
+     JComboBox cBoxStream = new JComboBox();
  	
 	public void course() {
+		cBoxCourse.addItemListener(new ItemListener() {
+			public void itemStateChanged(ItemEvent e) {
+				SelectStream SS = new SelectStream();
+			    selectCourse = (String) cBoxCourse.getSelectedItem();
+			    listC.clear();
+			    listC.addAll(SS.matchLevel(selectCourse));
+			   // System.out.print(list);
+			   
+			    cBoxStream.removeAllItems();
+			    
+			    for (String s: listC) {
+			    	
+			  //  String s = String.valueOf(list);
+			    cBoxStream.addItem(s);
+			   
+			     }
+				 }	
+			
+			
+		});
+
+
 		cBoxCourse.setToolTipText("123");
 		cBoxCourse.setBounds(236, 7, 94, 24);
 		frame.getContentPane().add(cBoxCourse);
     
+	}
+	
+	public void stream() {
+		
+		cBoxStream.setBounds(393, 7, 91, 24);
+		frame.getContentPane().add(cBoxStream);
 	}
 	
 	public static void main(String[] args) {
@@ -61,6 +92,7 @@ public class Tinterface {
 		
 		initialize();
 		course();
+		stream();
 	}
 
 	/**
@@ -95,11 +127,17 @@ public class Tinterface {
 				SelectCourse SC = new SelectCourse();
 			    selectLevel = (String) cBoxLevel.getSelectedItem();
 			    list.clear();
-			  
 			    list.addAll(SC.matchLevel(selectLevel));
+			   // System.out.print(list);
+			    int l = list.size();
+			    cBoxCourse.removeAllItems();
+			    
+			    for (String s: list) {
+			    	
+			  //  String s = String.valueOf(list);
+			    cBoxCourse.addItem(s);
 			   
-			    cBoxCourse.addItem(list);
-			   
+			     }
 				 }
 			}
 		});
@@ -128,8 +166,6 @@ public class Tinterface {
 		lblStream.setBounds(346, 12, 60, 15);
 		frame.getContentPane().add(lblStream);
 		
-		JComboBox cBoxStream = new JComboBox();
-		cBoxStream.setBounds(393, 7, 91, 24);
-		frame.getContentPane().add(cBoxStream);
+		
 	}
 }

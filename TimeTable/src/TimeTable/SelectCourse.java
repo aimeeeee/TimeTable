@@ -8,7 +8,7 @@ import com.mysql.jdbc.ResultSetMetaData;
 
 public class SelectCourse extends Tinterface{
 	
-	public ArrayList<Map<String, Object>> matchLevel(String level) {
+	public ArrayList<String> matchLevel(String level) {
 		
     ArrayList courseList = new ArrayList();	
     
