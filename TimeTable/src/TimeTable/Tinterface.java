@@ -148,20 +148,6 @@ public class Tinterface {
 		frame.getContentPane().add(cBoxLevel);
 		
 		
-	//JComboBox cBoxCourse = new JComboBox();
-		/*cBoxCourse.addItemListener(new ItemListener() {
-			public void itemStateChanged(ItemEvent e) {
-				if(e.getStateChange() == ItemEvent.SELECTED)
-				cBoxCourse.addItem(list);
-				//System.out.print(list);
-			}
-			
-		});*/
-	/*	cBoxCourse.setToolTipText("");
-		cBoxCourse.setBounds(236, 7, 94, 24);
-		frame.getContentPane().add(cBoxCourse);
-		cBoxCourse.addItem("please select level");*/
-		
 		JLabel lblStream = new JLabel("Stream");
 		lblStream.setBounds(346, 12, 60, 15);
 		frame.getContentPane().add(lblStream);

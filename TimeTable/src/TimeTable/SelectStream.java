@@ -21,11 +21,9 @@ public class SelectStream {
 				
 				if(s != null) {
 					streamList.add(s);
-			//	streamList.add(rs.getString("STREAM"));	
-			//	streamList.add(rs.getString("STREAM2"));	
-			//	streamList.add(rs.getString("STREAM3"));	
-			//	streamList.add(rs.getString("STREAM4"));	
-				}}
+			
+				}
+				}
 			}
 			System.out.println(streamList);
 			
