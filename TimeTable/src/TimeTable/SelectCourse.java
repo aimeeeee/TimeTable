@@ -19,7 +19,9 @@ public class SelectCourse extends Tinterface{
 			
 		while (rs.next()) {//数据集不为空
 			courseList.add((String) rs.getObject(1));		
+
 			}
+
 		
 		System.out.println(courseList);
 		
@@ -27,6 +29,10 @@ public class SelectCourse extends Tinterface{
 		catch (Exception e) {  
             e.printStackTrace();  
       }  
+
+//		String[] stringArray = courseList.toArray(new String[0]);
+//		return stringArray;
+
 		return courseList;
 		
 	}
