@@ -164,10 +164,6 @@ public class Tinterface {
 		frame.getContentPane().add(lblStream);
 		
 
-		
-	//	JComboBox cBoxStream = new JComboBox();
-		//cBoxStream.setBounds(393, 7, 91, 24);
-	//	frame.getContentPane().add(cBoxStream);
 
 	}
 }
