@@ -7,6 +7,8 @@ public class SelectStream {
 
 	public ArrayList<String> matchLevel(String course) {
 		
+		//get result from DB
+		
 	    ArrayList<String> streamList = new ArrayList();	
 	    
 		DBConnection DBC = new DBConnection();

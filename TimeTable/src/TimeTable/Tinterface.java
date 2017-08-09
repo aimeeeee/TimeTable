@@ -25,7 +25,7 @@ public class Tinterface {
 
 	private JFrame frame;
 	String selectLevel;
-<<<<<<< HEAD
+
 	String selectCourse;
      ArrayList<String> list = new ArrayList();
      ArrayList<String> listC = new ArrayList();
@@ -38,21 +38,21 @@ public class Tinterface {
 	public void course() {
 		cBoxCourse.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent e) {
+				if(e.getStateChange() == ItemEvent.SELECTED) {
 				SelectStream SS = new SelectStream();
 			    selectCourse = (String) cBoxCourse.getSelectedItem();
 			    listC.clear();
 			    listC.addAll(SS.matchLevel(selectCourse));
-			   // System.out.print(list);
-			   
+			 
 			    cBoxStream.removeAllItems();
 			    
 			    for (String s: listC) {
-			    	
-			  //  String s = String.valueOf(list);
+			   System.out.println(s);
+			 
 			    cBoxStream.addItem(s);
 			   
 			     }
-				 }	
+				 }	}
 			
 			
 		});
@@ -65,23 +65,13 @@ public class Tinterface {
 	}
 	
 	public void stream() {
-		
-		cBoxStream.setBounds(393, 7, 91, 24);
-		frame.getContentPane().add(cBoxStream);
-=======
-     ArrayList list = new ArrayList();
-    
-    String[] cString  = { "please select level"};
-     JComboBox cBoxCourse = new JComboBox(cString);
- 	 
- 	
-	public void course() {
 		cBoxCourse.setToolTipText("123");
-		cBoxCourse.setBounds(236, 7, 94, 24);
-		frame.getContentPane().add(cBoxCourse);
+		cBoxStream.setBounds(393, 7, 91, 24);
+		frame.getContentPane().add(cBoxStream);}
+
     
->>>>>>> refs/remotes/origin/master
-	}
+ 
+
 	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -106,10 +96,10 @@ public class Tinterface {
 		
 		initialize();
 		course();
-<<<<<<< HEAD
+//<<<<<<< HEAD
 		stream();
-=======
->>>>>>> refs/remotes/origin/master
+//=======
+//>>>>>>> refs/remotes/origin/master
 	}
 
 	/**
@@ -145,9 +135,9 @@ public class Tinterface {
 			    selectLevel = (String) cBoxLevel.getSelectedItem();
 			    list.clear();
 			    list.addAll(SC.matchLevel(selectLevel));
-<<<<<<< HEAD
+
 			   // System.out.print(list);
-			    int l = list.size();
+			   // int l = list.size();
 			    cBoxCourse.removeAllItems();
 			    
 			    for (String s: list) {
@@ -156,12 +146,8 @@ public class Tinterface {
 			    cBoxCourse.addItem(s);
 			   
 			     }
-=======
-			    course();
-			    cBoxCourse.removeAllItems();
-			    cBoxCourse.addItem(list);
-			    System.out.println(list);
->>>>>>> refs/remotes/origin/master
+
+			 
 				 }
 			}
 		});
@@ -172,34 +158,16 @@ public class Tinterface {
 		frame.getContentPane().add(cBoxLevel);
 		
 		
-<<<<<<< HEAD
+
 		JLabel lblStream = new JLabel("Stream");
 		lblStream.setBounds(346, 12, 60, 15);
 		frame.getContentPane().add(lblStream);
 		
+
 		
-=======
-	//JComboBox cBoxCourse = new JComboBox();
-		/*cBoxCourse.addItemListener(new ItemListener() {
-			public void itemStateChanged(ItemEvent e) {
-				if(e.getStateChange() == ItemEvent.SELECTED)
-				cBoxCourse.addItem(list);
-				//System.out.print(list);
-			}
-			
-		});*/
-	/*	cBoxCourse.setToolTipText("");
-		cBoxCourse.setBounds(236, 7, 94, 24);
-		frame.getContentPane().add(cBoxCourse);
-		cBoxCourse.addItem("please select level");*/
-		
-		JLabel lblStream = new JLabel("Stream");
-		lblStream.setBounds(346, 12, 60, 15);
-		frame.getContentPane().add(lblStream);
-		
-		JComboBox cBoxStream = new JComboBox();
-		cBoxStream.setBounds(393, 7, 91, 24);
-		frame.getContentPane().add(cBoxStream);
->>>>>>> refs/remotes/origin/master
+	//	JComboBox cBoxStream = new JComboBox();
+		//cBoxStream.setBounds(393, 7, 91, 24);
+	//	frame.getContentPane().add(cBoxStream);
+
 	}
 }
