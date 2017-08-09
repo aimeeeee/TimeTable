@@ -30,7 +30,7 @@ public class Tinterface {
      ArrayList<String> list = new ArrayList();
      ArrayList<String> listC = new ArrayList();
     
-    // String[] cString  = { "please select level"};
+  
      JComboBox cBoxCourse = new JComboBox();
  	 
      JComboBox cBoxStream = new JComboBox();
@@ -65,7 +65,7 @@ public class Tinterface {
 	}
 	
 	public void stream() {
-		cBoxCourse.setToolTipText("123");
+		//cBoxCourse.setToolTipText("123");
 		cBoxStream.setBounds(393, 7, 91, 24);
 		frame.getContentPane().add(cBoxStream);}
 
@@ -96,10 +96,9 @@ public class Tinterface {
 		
 		initialize();
 		course();
-//<<<<<<< HEAD
+
 		stream();
-//=======
-//>>>>>>> refs/remotes/origin/master
+
 	}
 
 	/**
@@ -136,8 +135,7 @@ public class Tinterface {
 			    list.clear();
 			    list.addAll(SC.matchLevel(selectLevel));
 
-			   // System.out.print(list);
-			   // int l = list.size();
+			
 			    cBoxCourse.removeAllItems();
 			    
 			    for (String s: list) {
